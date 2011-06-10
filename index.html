@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>Thumbnail Hover State Overlay</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="css/style.css?v=2">
+	<link href="css/prettify.css" type="text/css" rel="stylesheet" />
+	
+	<script type="text/javascript" src="css/prettify.js"></script>
+
+	<style type='text/css'>
+		ul.thumbnails { 
+			/* This isn't needed, just some extra styling */
+			margin: 0;  list-style-type: none; padding: 0; margin: 20px 0 0 0; 
+		}
+
+		ul.thumbnails li {
+			/* This isn't needed, just some extra styling */
+			display: inline-block; margin: 6px; 
+
+			/* Actually part of the style */
+			text-align: center; 
+		}
+
+		ul.thumbnails li a {
+			border: solid 1px #a3abad; 
+			display: inline-block; 
+			line-height: 0;
+			-webkit-box-shadow: 0 0 3px rgba(0,0,0, 0.25);
+			-moz-box-shadow: 0 0 3px rgba(0,0,0, 0.25);;
+			box-shadow: 0 0 3px rgba(0,0,0, 0.25);
+			margin: 0 0 10px;
+			position: relative;
+			z-index: 1;
+			text-decoration: none;
+			padding: 2px;
+			background: #fff;
+		}
+
+		ul.thumbnails li a:hover {
+			padding: 3px;
+			background: rgb(12,159,208);
+			border: solid 1px #1488ad;
+			-webkit-border-radius: 2px;
+			-moz-border-radius: 2px;
+			border-radius: 2px;
+			margin: -1px -1px 9px -1px;
+			-webkit-box-shadow: 0 0 5px rgba(0,0,0, 0.25);
+			-moz-box-shadow: 0 0 5px rgba(0,0,0, 0.25);;
+			box-shadow: 0 0 5px rgba(0,0,0, 0.25);
+		}
+
+		ul.thumbnails li a:hover::before {
+			content: 'View Project';
+			background: rgba(0,0,0,0.7);
+			font-size: 12px;
+			font-weight: bold;
+			line-height: 26px;
+			color: #fff;
+			width: 100px;
+			height: 26px;
+			z-index: 3;
+			position: absolute;
+			top: 0;
+			left: 0; 
+			bottom: 0;
+			right: 0;
+			margin: 64px 0 0 55px;
+			-webkit-text-shadow: 1px 1px 1px rgba(0,0,0,0.5); 
+			-moz-text-shadow: 1px 1px 1px rgba(0,0,0,0.5); 
+			text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+			-webkit-border-radius: 14px;
+			-moz-border-radius: 14px;
+			border-radius: 14px;
+		}
+
+		ul.thumbnails li a:hover::after {
+			content: '';
+			background: rgba(12, 159, 208, 0.15);
+			position: absolute; 
+			top: 3px;
+			right: 3px;
+			bottom: 3px;
+			left: 3px;
+			-moz-box-shadow: inset 0 0 8px rgba(0,0,0, 0.9);
+			-webkit-box-shadow: inset 0 0 8px rgba(0,0,0, 0.9);
+			box-shadow: inset 0 0 8px rgba(0,0,0, 0.9);
+		}
+
+		ul.thumbnails li strong {
+			font-size: 12px;
+			color: #535556;
+			-webkit-text-shadow: 1px 1px 1px #fff; 
+			-moz-text-shadow: 1px 1px 1px #fff; 
+			text-shadow: 1px 1px 1px #fff;
+		}
+	</style>
+
+</head>
+<body onload="prettyPrint()">
+	<div id="container">
+		<header class='clearfix'>
+			<h1>Thumbnail Hover State Overlay (HTML)</h1>
+			<a href='http://www.premiumpixels.com/freebies/thumbnail-hover-state-overlay-psd/' target='_blank'>Originally Created By Orman Clark</a>
+		</header>
+
+		<div id="main" role="main">
+			<ul class='thumbnails'>
+				<li>
+					<a href='#'><img src='img1.jpg' width='200' height='145' /></a>
+					<br />
+					<strong>Meat Sweats</strong>
+				</li>
+				<li>
+					<a href='#'><img src='img2.jpg' width='200' height='145' /></a>
+					<br />
+					<strong>Driving Miss Daisy</strong>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
